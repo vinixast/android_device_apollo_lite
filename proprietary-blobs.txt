@@ -629,6 +629,4 @@ vendor/lib64/libsrv_um.so
 vendor/lib64/libufwriter.so
 vendor/lib64/libusc.so
 vendor/lib64/mediadrm/libmockdrmcryptoplugin.so
-xbin/BGW
-xbin/mnld
 

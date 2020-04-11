@@ -12,7 +12,9 @@ LOCAL_C_INCLUDES := \
 LOCAL_SHARED_LIBRARIES := \
 	libhardware \
 	libcutils \
-	libutils
+	libutils \
+ 	libsync \
+	libnativewindow
 
 LOCAL_MODULE := libgralloc_extra
 
