@@ -1,0 +1,22 @@
+How to make a patches after changes in LineageOS source code:
+
+Cd working_dir (For example: cd lineage/frameworks/base)
+git status
+git add .
+git commit -m "name of patch"
+git show HEAD > 0001_.patch
+
+How to launch the LineageOS 14.1 build:
+
+Download vendor and device from my GitHub.
+Create dirs vernee/apollo_lite and place them in working_dir/device and in working_dir/vendor
+After copy files from downloaded device in working_dir/device , and from downloaded vendor in working_dir/vendor
+Open terminal and write:
+
+export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx12g"
+
+. build/envsetup.sh && breakfast apollo_lite
+
+brunch apollo_lite
+
+Wait for the build to finish, for me ~3hr
