@@ -54,7 +54,6 @@ LOCAL_C_INCLUDES:= \
     $(TOP)/frameworks/base/include/ \
     $(TOP)/device/vernee/apollo_lite/gui_ext/inc \
     $(TOP)/device/vernee/apollo_lite/ui_ext/inc \
-    $(TOP)/device/vernee/apollo_lite/gralloc_extra/include
 
 LOCAL_SHARED_LIBRARIES := \
     libutils \
@@ -67,7 +66,6 @@ LOCAL_SHARED_LIBRARIES := \
     libdl \
     libion \
     libion_mtk \
-    libgralloc_extra \
     libui_ext
 
 # for bring up, please unmark this line
