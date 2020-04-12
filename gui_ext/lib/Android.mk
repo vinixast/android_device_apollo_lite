@@ -54,6 +54,7 @@ LOCAL_C_INCLUDES:= \
     $(TOP)/frameworks/base/include/ \
     $(TOP)/device/vernee/apollo_lite/gui_ext/inc \
     $(TOP)/device/vernee/apollo_lite/ui_ext/inc \
+    $(TOP)/device/vernee/apollo_lite/gralloc_extra/include
 
 LOCAL_SHARED_LIBRARIES := \
     libutils \
@@ -66,7 +67,10 @@ LOCAL_SHARED_LIBRARIES := \
     libdl \
     libion \
     libion_mtk \
-    libui_ext
+    libgralloc_extra \
+    libui_ext \
+    libsync \
+    libnativewindow
 
 # for bring up, please unmark this line
 # LOCAL_CFLAGS += -DMTK_DO_NOT_USE_GUI_EXT
