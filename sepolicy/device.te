@@ -24,6 +24,13 @@ type fm_device, dev_type;
 type Vcodec_device, dev_type;
 type M4U_device_device, dev_type;
 type mtk_smi_device, dev_type;
+type ebc_device, dev_type;
+
+# GPS
+type gps_device, dev_type;
+
+# SPM
+type spm_device, dev_type;
 
 # NFC
 type mt6605_device, dev_type;
@@ -34,6 +41,12 @@ type madev0_device, dev_type;
 
 # IR
 type irtx_device, dev_type;
+
+# Trustzone
+type tkcore_device, dev_type;
+
+# CMDQ
+type cmdq_device, dev_type;
 
 # Block devices
 type proinfo_device, dev_type;

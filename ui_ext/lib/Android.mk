@@ -42,18 +42,14 @@ LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES:= \
-	GraphicBufferUtil.cpp \
 	FpsCounter.cpp \
 	IDumpTunnel.cpp \
 	RefBaseDump.cpp
 
 LOCAL_C_INCLUDES:= \
 	device/vernee/apollo_lite/ui_ext/inc \
-	device/vernee/apollo_lite/gralloc_extra/include \
 	external/libpng \
-	external/zlib \
-	external/skia/src/images \
-	external/skia/include/core
+	external/zlib
 
 LOCAL_SHARED_LIBRARIES := \
 	libpng \
@@ -61,9 +57,10 @@ LOCAL_SHARED_LIBRARIES := \
 	libui \
 	libcutils \
 	libhardware \
-	libgralloc_extra \
-	libbinder \
-	libdl
+#	libbinder \
+#	libdl \
+# 	libsync \
+#	libnativewindow
 
 LOCAL_MODULE := libui_ext
 

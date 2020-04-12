@@ -6,8 +6,6 @@ PRODUCT_COPY_FILES += \
 # Mediatek
 PRODUCT_PACKAGES += \
     libstlport \
-    libgralloc_extra \
-    libgui_ext \
     libui_ext \
     libmtk_symbols \
     libxlog
