@@ -1,5 +1,5 @@
 #ril
-BOARD_RIL_CLASS := ../../../device/vernee/apollo_lite/ril
+BOARD_RIL_CLASS := ../../../device/vernee/apollo_x/ril
 BOARD_CONNECTIVITY_MODULE := conn_soc
 
 SIM_COUNT := 2
