@@ -48,8 +48,8 @@ LOCAL_SRC_FILES:= \
 	RefBaseDump.cpp
 
 LOCAL_C_INCLUDES:= \
-	device/vernee/apollo_lite/ui_ext/inc \
-	device/vernee/apollo_lite/gralloc_extra/include \
+	device/vernee/apollo_x/ui_ext/inc \
+	device/vernee/apollo_x/gralloc_extra/include \
 	external/libpng \
 	external/zlib \
 	external/skia/src/images \
