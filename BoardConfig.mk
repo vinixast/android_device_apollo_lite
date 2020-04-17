@@ -1,6 +1,8 @@
 # mt6797 platform boardconfig
 LOCAL_PATH := device/vernee/apollo_x
 
+TARGET_OTA_ASSERT_DEVICE := apollo_x,k15tb_a
+
 # Device board elements
 include $(LOCAL_PATH)/board/*.mk
 
