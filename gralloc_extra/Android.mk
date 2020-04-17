@@ -1,5 +1,5 @@
 LOCAL_PATH := $(call my-dir)
-ifneq ($(filter apollo_lite, $(TARGET_DEVICE)),)
+ifneq ($(filter apollo_x, $(TARGET_DEVICE)),)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
