@@ -1,8 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
-LOCAL_C_INCLUDES := \ 
-	bootable/recovery \
-	bootable/recovery-twrp
+LOCAL_C_INCLUDES := \ bootable/recovery-twrp
 
 ifeq ($(TARGET_DEVICE),apollo_x)
 
