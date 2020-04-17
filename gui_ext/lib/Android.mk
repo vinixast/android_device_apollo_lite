@@ -68,7 +68,9 @@ LOCAL_SHARED_LIBRARIES := \
     libion \
     libion_mtk \
     libgralloc_extra \
-    libui_ext
+    libui_ext \
+    libsync \
+    libnativewindow
 
 # for bring up, please unmark this line
 # LOCAL_CFLAGS += -DMTK_DO_NOT_USE_GUI_EXT
