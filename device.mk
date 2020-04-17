@@ -1,4 +1,4 @@
-LOCAL_PATH := device/vernee/apollo_lite
+LOCAL_PATH := device/vernee/apollo_x
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -14,7 +14,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi 280dpi hdpi tvdpi mdpi ldpi
 
 # Recovery allowed devices
-TARGET_OTA_ASSERT_DEVICE := lite,apollo_lite,k15tb_a
+TARGET_OTA_ASSERT_DEVICE := x,apollo_x,k15tb_a
 
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
@@ -66,4 +66,4 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-4096-dalv
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-4096-hwui-memory.mk)
 
 # Vendor
-$(call inherit-product, vendor/vernee/apollo_lite/apollo_lite-vendor.mk)
+$(call inherit-product, vendor/vernee/apollo_x/apollo_x-vendor.mk)
