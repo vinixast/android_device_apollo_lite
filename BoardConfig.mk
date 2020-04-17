@@ -186,6 +186,8 @@ BOARD_SECCOMP_POLICY := $(LOCAL_PATH)/seccomp
 
 include vendor/mediatek/VendorConfig.mk
 
+WITHOUT_CHECK_API := true
+
 
 LIBSHIM_XLOG_SYMBOLS :=true
 LIBSHIM_SND_SYMBOLS := true
