@@ -3,6 +3,7 @@
 #include <ui/Rect.h>
 #include <log/log.h>
 #include <dlfcn.h>
+#include <string>
 
 /*
 #include <cutils/process_name.h>

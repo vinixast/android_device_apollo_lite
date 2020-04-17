@@ -1,5 +1,6 @@
 type ril-daemon-mtk_exec, exec_type, file_type;
-type ril-daemon-mtk, domain, domain_deprecated;
+type ril-daemon-mtk, domain;
+#type ril-daemon-mtk, domain, domain_deprecated;
 
 init_daemon_domain(ril-daemon-mtk)
 net_domain(ril-daemon-mtk)
@@ -15,11 +16,9 @@ allow ril-daemon-mtk self:udp_socket create_socket_perms;
 allow ril-daemon-mtk self:capability { setuid net_admin net_raw };
 
 allow ril-daemon-mtk radio_device:dir search;
-allow ril-daemon-mtk radio_prop:property_service set;
+set_prop(ril-daemon-mtk, radio_prop)
 
-allow ril-daemon-mtk ctl_muxreport-daemon_prop:property_service set;
-allow ril-daemon-mtk ril_mux_report_case_prop:property_service set;
-allow ril-daemon-mtk ril_sim_inserted_status:property_service set;
-allow ril-daemon-mtk serial_number_prop:property_service set;
-
-unix_socket_connect(ril-daemon-mtk, property, init)
+set_prop(ril-daemon-mtk, ctl_muxreport-daemon_prop)
+set_prop(ril-daemon-mtk, ril_mux_report_case_prop)
+set_prop(ril-daemon-mtk, ril_sim_inserted_status)
+set_prop(ril-daemon-mtk, serial_number_prop)

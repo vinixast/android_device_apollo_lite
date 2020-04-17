@@ -31,7 +31,7 @@
     <bool name="config_intrusiveNotificationLed">true</bool>
 
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
-    <bool name="config_intrusiveBatteryLed">true</bool>
+    <add-resource type="bool" name="config_intrusiveBatteryLed">true</add-resource>
 
     <integer-array name="config_autoBrightnessLevels">
         <item>16</item>

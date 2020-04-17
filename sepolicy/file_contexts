@@ -5,7 +5,6 @@
 /system/bin/md_ctrl                                             u:object_r:md_ctrl_exec:s0
 /system/bin/fuelgauged                                          u:object_r:fuelgauged_exec:s0
 /system/bin/gsm0710muxd                                         u:object_r:gsm0710muxd_exec:s0
-/system/xbin/mnld                                               u:object_r:mnld_exec:s0
 /system/bin/muxreport                                           u:object_r:muxreport_exec:s0
 /system/bin/msensord                                            u:object_r:msensord_exec:s0
 /system/bin/qmc6983d                                            u:object_r:qmc6983d_exec:s0
@@ -24,8 +23,10 @@
 /system/bin/etsd                                                u:object_r:etsd_exec:s0
 
 # exfat & ntfs
-/system/bin/mount\.ntfs                                         u:object_r:mkfs_exec:s0
-/system/bin/mount\.exfat                                        u:object_r:mkfs_exec:s0
+#/system/bin/mount\.ntfs                                         u:object_r:mkfs_exec:s0
+#/system/bin/mount\.exfat                                        u:object_r:mkfs_exec:s0
+/system/bin/mount\.exfat                        		u:object_r:fsck_exec:s0
+/system/bin/mount\.ntfs						u:object_r:fsck_exec:s0
 
 # Meta mode
 /system/bin/meta_tst                                            u:object_r:meta_tst_exec:s0
@@ -34,7 +35,7 @@
 # Files from firmware/nv partitions
 /protect_f(/.*)?                                                u:object_r:protect_f_data_file:s0
 /protect_s(/.*)?                                                u:object_r:protect_s_data_file:s0
-/protect_s/properties(/.*)?                                     u:object_r:persist_property_file:s0
+#/protect_s/properties(/.*)?                                     u:object_r:persist_property_file:s0
 /nvdata(/.*)?                                                   u:object_r:nvdata_file:s0
 /data/nvram(/.*)?                                               u:object_r:nvdata_file:s0
 

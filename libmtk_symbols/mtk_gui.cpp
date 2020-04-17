@@ -1,4 +1,7 @@
 #include <stdint.h>
+#include <sstream>
+#include <iostream>
+#include <fstream>
 
 extern "C" {
     void _ZN7android14SurfaceControl8setLayerEj(uint32_t);

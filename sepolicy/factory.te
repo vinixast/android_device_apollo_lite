@@ -1,5 +1,6 @@
 type factory_exec, exec_type, file_type;
-type factory, domain, domain_deprecated;
+#type factory, domain, domain_deprecated;
+type factory, domain;
 
 init_daemon_domain(factory)
 net_domain(factory)
@@ -57,11 +58,9 @@ allow factory gps_device:chr_file rw_file_perms;
 allow factory mnld_data_file:dir rw_dir_perms;
 allow factory mnld_data_file:file rw_file_perms;
 allow factory mnld_exec:file rx_file_perms;
-allow factory mnld_prop:property_service set;
+set_prop(factory, mnld_prop)
 
 # Other capabilities
 allow factory self:capability { dac_override net_admin net_raw sys_nice sys_time };
 allow factory self:process execmem;
-allow factory audiohal_prop:property_service set;
-
-unix_socket_connect(factory, property, init);
+set_prop(factory, audiohal_prop)
