@@ -67,3 +67,4 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-4096-hwui
 
 # Vendor
 $(call inherit-product, vendor/vernee/apollo_x/apollo_x-vendor.mk)
+
