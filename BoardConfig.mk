@@ -1,5 +1,5 @@
 # mt6797 platform boardconfig
-LOCAL_PATH := device/vernee/apollo_lite
+LOCAL_PATH := device/vernee/apollo_x
 
 # Device board elements
 include $(LOCAL_PATH)/board/*.mk
@@ -55,7 +55,11 @@ BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --base 0x40078000 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x03f88000 --second_offset 0x00e88000 --tags_offset 0x0df88000 --board 1450352440
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
+TARGET_KERNEL_CONFIG := k15tb_a_defconfig
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+MTK_APPENDED_DTB_SUPPORT := yes
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+#TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 
 # BLOCK_BASED_OTA
 BLOCK_BASED_OTA := false
@@ -107,8 +111,8 @@ TARGET_SPECIFIC_HEADER_PATH += $(DEVICE_PATH)/include
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 # LZMA compression for recovery's & kernel ramdisk....
-BOARD_CUSTOM_BOOTIMG_MK := device/vernee/apollo_lite/custombootimg.mk
-BOARD_CANT_BUILD_RECOVERY_FROM_BOOT_PATCH := true
+#BOARD_CUSTOM_BOOTIMG_MK := device/vernee/apollo_lite/custombootimg.mk
+#BOARD_CANT_BUILD_RECOVERY_FROM_BOOT_PATCH := true
 
 # SELinux
 BOARD_SEPOLICY_DIRS := \
@@ -118,4 +122,4 @@ BOARD_SEPOLICY_DIRS := \
 BOARD_SECCOMP_POLICY := $(LOCAL_PATH)/seccomp
 
 # Kernel OBJ WorkAround for build
-$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
+#$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
